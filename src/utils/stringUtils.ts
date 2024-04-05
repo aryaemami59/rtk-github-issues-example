@@ -7,7 +7,7 @@ export function insertMentionLinks(markdown: string) {
 
 export function shorten(text = '', maxLength = 140) {
   // Normalize newlines
-  let cleanText = text.replace(/\\r\\n/g, '\n')
+  let cleanText = (text == null ? '' : text).replace(/\\r\\n/g, '\n')
 
   // Return if short enough already
   if (cleanText.length <= maxLength) {
